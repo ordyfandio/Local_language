@@ -1,0 +1,80 @@
+WindowManager:
+    HeroScreen:
+    FrontPageScreen:
+
+<HeroScreen>:
+    name: 'Hero'
+    size_hint:.7,1
+    pos_hint:{'center_x':0.5,'center_y':0.5} 
+    GridLayout:
+        spacing:"5dp"
+        cols:1
+        pos_hint:{'center_x':0.5,'center_y':0.75} 
+        Image:
+            source:'zebre.jpg' 
+    GridLayout:
+        cols:2
+        spacing:"5dp"
+        Label:
+            text: 'Speakeasy'
+            font_size:"40px"
+            color:"#F4C313"
+    GridLayout:
+        cols:3
+        pos_hint:{'center_x':0.5,'center_y':0.35}
+        Label:
+            text: 'The free, fun and method to learn a language !'
+            font_size:"22px"
+            color:"#908888"
+    Button: 
+        text:"LET'S GO !"
+        width:"500px"
+        height:"50px"
+        font_size:'22px'
+        background_color:"#f4c313"
+        background_normal:""
+        size_hint:(None,None)
+        pos_hint:{'center_x':0.5,'center_y':0.2}
+        on_release:app.root.current="FrontPage"
+    Button: 
+        text:"I ALREADY HAVE AN ACCOUNT"
+        width:"500px"
+        height:"50px"
+        font_size:'22px'
+        size_hint:(None,None)
+        pos_hint:{'center_x':0.5,'center_y':0.1}
+        background_color:"#FFF8F8"
+        background_normal:""
+        color:'#f4c313'
+
+<FrontPageScreen>:
+    name:'FrontPage'
+    size_hint:.7,1
+    pos_hint:{'center_x':0.5,'center_y':0.5}  
+    GridLayout:
+        cols:1
+        spacing:"5dp"
+        pos_hint:{'center_x':0.5,'center_y':0.75} 
+        Label:
+            text_area: "Hello ,my name is Speak. I will guide you throughout this wonderful journey "
+            font_size:"20px"
+            color:"#908888"
+    GridLayout:
+        spacing:"5dp"
+        cols:2
+        Image:
+            source:'zebre1.jpg' 
+    Button: 
+        text:"CONTINUE"
+        width:"500px"
+        height:"50px"
+        font_size:'30px'
+        background_color:"#f4c313"
+        background_normal:""
+        size_hint:(None,None)
+        pos_hint:{'center_x':0.5,'center_y':0.2}
+        on_release:app.root.current="FrontPage"
+            
+
+
+     
