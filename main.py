@@ -14,11 +14,15 @@ class HeroScreen(Screen):
 class FrontPageScreen(Screen):
     pass
 
+class IntroScreen(Screen):
+    pass
+
 class Speakeasy(App):
     def build(self):
         root = WindowManager()
         root.add_widget(HeroScreen(name='Hero'))
         root.add_widget(FrontPageScreen(name='FrontPage'))
+        root.add_widget(IntroScreen(name='Intro'))
         return root
 
 if __name__ == '__main__':

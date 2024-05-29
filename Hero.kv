@@ -1,6 +1,7 @@
 WindowManager:
     HeroScreen:
     FrontPageScreen:
+    IntroScreen:
 
 <HeroScreen>:
     name: 'Hero'
@@ -30,7 +31,7 @@ WindowManager:
         text:"LET'S GO !"
         width:"500px"
         height:"50px"
-        font_size:'22px'
+        font_size:'30px'
         background_color:"#f4c313"
         background_normal:""
         size_hint:(None,None)
@@ -39,7 +40,7 @@ WindowManager:
     Button: 
         text:"I ALREADY HAVE AN ACCOUNT"
         width:"500px"
-        height:"50px"
+        height:"70px"
         font_size:'22px'
         size_hint:(None,None)
         pos_hint:{'center_x':0.5,'center_y':0.1}
@@ -52,7 +53,7 @@ WindowManager:
     size_hint:.7,1
     pos_hint:{'center_x':0.5,'center_y':0.5}  
     GridLayout:
-        cols:1
+        cols:2
         spacing:"5dp"
         pos_hint:{'center_x':0.5,'center_y':0.75} 
         Label:
@@ -61,19 +62,65 @@ WindowManager:
             color:"#908888"
     GridLayout:
         spacing:"5dp"
-        cols:2
+        cols:3
         Image:
             source:'zebre1.jpg' 
     Button: 
         text:"CONTINUE"
         width:"500px"
-        height:"50px"
-        font_size:'30px'
+        height:"70px"
+        font_size:'35px'
         background_color:"#f4c313"
         background_normal:""
         size_hint:(None,None)
         pos_hint:{'center_x':0.5,'center_y':0.2}
-        on_release:app.root.current="FrontPage"
+        on_release:app.root.current="Intro"
+
+<IntroScreen>:
+    name:'Intro'
+    size_hint:.7,1
+    pos_hint:{'center_x':0.5,'center_y':0.5} 
+    Label:
+        pos_hint:{'center_x':0.2,'center_y':0.8} 
+        text:"What do you want to learn ?"
+        font_size:"18px"
+        color:"black"
+    Image:
+        pos_hint:{'center_x':0.8,'center_y':0.8} 
+        source:'zebre1.jpg' 
+        width:"10px"
+        font_size:"10px"
+    Label:
+        pos_hint:{'center_x':0.15,'center_y':0.65} 
+        text:"For French Speaking people"
+        color:"black"
+    Button
+        pos_hint:{'center_x':0.3,'center_y':0.55} 
+        text:"Ewondo"
+        background_color:"#908888"
+        background_normal:""
+        size_hint:(None,None)
+        width:"250px"
+        height:"50px"
+        font_size:"22px"
+    Button
+        pos_hint:{'center_x':0.3,'center_y':0.45} 
+        text:"Douala"
+        background_color:"#908888"
+        background_normal:""
+        size_hint:(None,None)
+        width:"250px"
+        height:"50px"
+        font_size:"22px"
+    Button
+        pos_hint:{'center_x':0.3,'center_y':0.35} 
+        text:"Bagangte"
+        background_color:"#908888"
+        background_normal:""
+        size_hint:(None,None)
+        width:"250px"
+        height:"50px"
+        font_size:"22px"
             
 
 
