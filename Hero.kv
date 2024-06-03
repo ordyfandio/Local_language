@@ -2,6 +2,8 @@ WindowManager:
     HeroScreen:
     FrontPageScreen:
     IntroScreen:
+    profileScreen:
+    NoAboutScreen:
 
 <HeroScreen>:
     name: 'Hero'
@@ -74,7 +76,8 @@ WindowManager:
         background_normal:""
         size_hint:(None,None)
         pos_hint:{'center_x':0.5,'center_y':0.2}
-        on_release:app.root.current="Intro"
+        on_release:app.root.current="Profile"
+                
 
 <IntroScreen>:
     name:'Intro'
@@ -89,39 +92,78 @@ WindowManager:
         pos_hint:{'center_x':0.8,'center_y':0.8} 
         source:'zebre1.jpg' 
         width:"10px"
-        font_size:"10px"
+        font_size:"10px"   
     Label:
-        pos_hint:{'center_x':0.15,'center_y':0.65} 
-        text:"For French Speaking people"
+        pos_hint:{'center_x':0.2,'center_y':0.6} 
+        text:"For English Speaking people"
         color:"black"
-    Button
-        pos_hint:{'center_x':0.3,'center_y':0.55} 
-        text:"Ewondo"
-        background_color:"#908888"
+    
+    Label:
+        pos_hint:{'center_x':0.2,'center_y':0.35} 
+        text:"For English French people"
+        color:"black"
+
+
+
+<profileScreen>:
+    name: 'Profile'
+    size_hint:.7,1
+    pos_hint:{'center_x':0.5,'center_y':0.5} 
+    GridLayout:
+        spacing:"5dp"
+        cols:1
+        pos_hint:{'center_x':0.5,'center_y':0.75} 
+        Image:
+            source:'zebre1.jpg' 
+    
+    GridLayout:
+        cols:2
+        pos_hint:{'center_x':0.5,'center_y':0.55}
+        Label:
+            text: 'Create a profile to save your progress !' 
+            font_size:"22px"
+            color:"#908888"
+    Button: 
+        text:"CREATE YOUR PROFILE"
+        width:"500px"
+        height:"50px"
+        font_size:'30px'
+        background_color:"#f4c313"
         background_normal:""
         size_hint:(None,None)
-        width:"250px"
-        height:"50px"
-        font_size:"22px"
-    Button
-        pos_hint:{'center_x':0.3,'center_y':0.45} 
-        text:"Douala"
-        background_color:"#908888"
-        background_normal:""
+        pos_hint:{'center_x':0.5,'center_y':0.2}
+        on_release:app.root.current="NoAbout"
+    Button: 
+        text:"LATER"
+        width:"500px"
+        height:"70px"
+        font_size:'22px'
         size_hint:(None,None)
-        width:"250px"
-        height:"50px"
-        font_size:"22px"
-    Button
-        pos_hint:{'center_x':0.3,'center_y':0.35} 
-        text:"Bagangte"
-        background_color:"#908888"
+        pos_hint:{'center_x':0.5,'center_y':0.1}
+        background_color:"#FFF8F8"
         background_normal:""
-        size_hint:(None,None)
-        width:"250px"
-        height:"50px"
-        font_size:"22px"
+        color:'#f4c313'
+    
+
+<NoAboutScreen>:
+    name:'NoAbout'
+    size_hint:.7,1
+    pos_hint:{'center_x':0.5,'center_y':0.5} 
+    Label:
+        pos_hint:{'center_x':0.2,'center_y':0.8} 
+        text:"How did you hear about Speakeasy ?"
+        font_size:"18px"
+        color:"black"
+    Image:
+        pos_hint:{'center_x':0.8,'center_y':0.8} 
+        source:'zebre1.jpg' 
+        width:"10px"
+        size_hint:(0.2, 0.2)
+    
+        
             
+    
+        
 
 
      
